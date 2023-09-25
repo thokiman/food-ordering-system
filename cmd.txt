@@ -1,0 +1,2 @@
+mvn com.github.ferstl:depgraph-maven-plugin:aggregate -DcreateImage=true -DreduceEdges=false -Dsco
+pe=compile "-Dincludes=com.food.ordering.system*:*"

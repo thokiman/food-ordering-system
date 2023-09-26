@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b623eef2-2d33-4a9e-ac11-9fa760f7ac41" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/com/food/ordering/system/OrderCreateHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/com/food/ordering/system/OrderCreateCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/order-domain/order-application-service/src/main/java/com/food/ordering/system/OrderCreateCommandHandler.java" afterDir="false" />
-    </list>
+    <list default="true" id="b623eef2-2d33-4a9e-ac11-9fa760f7ac41" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,7 +191,7 @@
       <workItem from="1695628981236" duration="14996000" />
       <workItem from="1695647328825" duration="5532000" />
       <workItem from="1695660630594" duration="598000" />
-      <workItem from="1695683429174" duration="4215000" />
+      <workItem from="1695683429174" duration="4536000" />
     </task>
     <servers />
   </component>

@@ -39,6 +39,7 @@ public class OrderCreateHelper {
         Restaurant restaurant = checkRestaurant(createOrderCommand);
         Order order = orderDataMapper.createOrderCommandToOrder(createOrderCommand);
         OrderCreatedEvent orderCreatedEvent = orderDomainService.validateAndInitiateOrder(order, restaurant);
+
         saveOrder(order);
         log.info("Order is created with id: {}",orderCreatedEvent.getOrder().getId().getValue());
         return orderCreatedEvent;
@@ -56,14 +57,16 @@ public class OrderCreateHelper {
         Restaurant restaurant = orderDataMapper.createOrderCommandToRestaurant(createOrderCommand);
         Optional<Restaurant> optionalRestaurant = restaurantRepository.findRestaurantInformation(restaurant);
         if(optionalRestaurant.isEmpty()) {
-            log.warn("Could nont find restaurant with restaurant id: {}", createOrderCommand.getRestaurantId());
+            log.warn("Could not find restaurant with restaurant id: {}", createOrderCommand.getRestaurantId());
             throw new OrderDomainException("Could not find restaurant with restaurant id: " + createOrderCommand.getRestaurantId());
         }
         return optionalRestaurant.get();
     }
 
     private Order saveOrder(Order order) {
+
         Order orderResult = orderRepository.save(order);
+        System.out.println(orderResult.getItems());
         if (orderResult == null) {
             log.error("Could not save order!");
             throw new OrderDomainException("Could not save order!");
